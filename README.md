@@ -1,46 +1,108 @@
-# Magento 2 eWay Payments
+# **Magento 2 eWay Payments Extension**
 
-***[Magento 2 eWay Payments](https://meetanshi.com/magento-2-eway-payments.html)***extension allows accepting online payments through credit cards by integrating Magento 2 with eWay payment gateway.
+The **Magento 2 eWay Payments** extension allows merchants to seamlessly integrate eWay payment solutions into their Magento store, offering customers a secure and efficient payment experience. By accepting various payment methods including credit and debit cards, eWay ensures smooth, hassle-free transactions, making it a reliable choice for online merchants looking to enhance their payment system.
 
+## **How It Works**
 
-Magento 2 eWay Payments extension by Meetanshi allows store owners to integrate eWay payment gateway with Magento 2. Capture secure online payments through credit cards with the help of Meetanshi's extension!
+The **Magento 2 eWay Payments extension** integrates directly with the eWay payment gateway. Once installed and configured, customers can select eWay as their payment method during checkout. The extension facilitates secure credit card payments, supports multiple currencies and provides a seamless user experience, making the payment process quick and secure.
 
-eWay is a popular payment gateway in Australia. It is a safe way for online payments. Integrate the extension in Magento 2 store after creating an account in eWay and receiving the registration API key and password.
+## **Key Features**
 
-Magento 2 eWay Payments extension allows accepting one off payments. There is a facility for customers to save the credit card details to ease their task at the time of next purchase. Also, enjoy the enterprise anti-fraud protection for Magento 2 store!
+* Choose between Direct Connection or Responsive Shared Page methods for processing transactions.  
+* Customize the payment method label to fit your store's branding.  
+* Capture authorized payments seamlessly.
 
-The module allows admin to process a full or partial refund, capture authorized transactions and process orders manually.
+## **Secure Transactions**
 
-##  Features for admin in Magento 2 eWay Payments:
- *  Manual order processing
+The Magento 2 eWay Payments extension ensures secure transaction processing through eWay’s encrypted payment gateway, providing peace of mind for both merchants and customers. Payment details are transmitted securely, with 3D Secure authentication added for enhanced security.
 
- * Capture authorized transactions
+## **Multiple Payment Options**
 
- * Easy processing of refunds
+This extension offers flexibility by supporting a variety of payment methods through eWay, including credit and debit cards (Visa, MasterCard, American Express) and PayPal, allowing customers to select their preferred payment option during checkout.
 
-##  Benefits of Magento 2 eWay Payments extension:
+## **Seamless Integration with Magento**
 
-* Enable/Disable the eWay Payment extension from the backend
+The extension seamlessly integrates with your Magento 2 store, allowing merchants to manage payment settings directly from the admin panel with easy-to-use configuration options, requiring no technical expertise for setup.
 
-* Enable Direct Connection or Responsive Shared Page method for transaction process
+## **Real-Time Transaction Monitoring**
 
-* The direct connection method is a simple single side server call. It supports Visa Checkout and AMEX Express Checkout.
+Merchants can monitor transactions in real-time through the Magento admin panel, gaining detailed insights into sales, payment status, errors and easily tracking payment disputes and refunds.
 
-* The Responsive Shared Page method includes payment forms hosted on eWAY's PCI DSS compliant.The process protects the merchant from      handling the payment process.
+## **Fraud Prevention**
 
-* Customize the label of payment method for the frontend.
+eWay’s built-in fraud detection tools perform real-time checks during payment processing, helping prevent fraudulent transactions, reduce chargebacks and protect your store from malicious activities through seamless integration with eWay’s fraud detection systems.
 
-* Option to enable the sandbox mode to test the transaction process. Live mode is enabled for the actual payment captures.
+## **Extension Installation**
 
-* The module supports the authorize/authorize and capture payment actions.
+To install the **Magento 2 eWay Payments** extension, follow these steps:
 
-* The module provides debugging mode support.
+### **Step 1:**
 
-* Supports all the major credit card types such as Visa, Master Card, JCB, Diners, etc.
+Extract the zip folder and upload the extension to the root directory of your Magento 2 installation using FTP.
 
-* Admin has the option to select the list of allowed countries to enable eWay payments from the backend
+### **Step 2:**
 
-For more information, visit [https://meetanshi.com/magento-2-eway-payments.html](https://meetanshi.com/magento-2-eway-payments.html)
+### Login to your SSH and run below commands step by step:
 
+* php bin/magento setup:upgrade  
+* For Magento version 2.0.x to 2.1.x \- php bin/magento setup:static-content:deploy  
+* For Magento version 2.2.x & above \- php bin/magento setup:static-content:deploy –f  
+* php bin/magento cache:flush
 
+## **How to Configure Magento 2 eWay Payments Extension**
 
+To configure the extension, log in to your Magento 2 admin panel, navigate to **Sales \> Payment Methods**, and adjust the settings to enable the extension.
+
+### **Step 1: Configure Settings**
+
+![configuration](https://github.com/user-attachments/assets/ebce9682-27a8-46d7-894a-7f57145d15ee)
+
+* **Enabled**: Set to "YES" to activate the payment method.  
+* **Connection Type**: Choose the connection type from the dropdown—either **Direct Connection** or **Responsive Shared Pages**.  
+* **Title**: Enter the title for the payment method to display on the frontend.  
+* **Sandbox Mode**: Enable sandbox mode by setting it to "YES" for testing purposes.  
+* **Live API Key**: Input the live API key provided during eWay Gateway registration.  
+* **Live API Password**: Enter the live API password received during eWay Gateway registration.  
+* **Live Client-Side Encryption Key**: Add the live encryption key provided upon registering with eWay Gateway.  
+* **Sandbox API Key**: Provide the sandbox API key issued during eWay Gateway registration.  
+* **Sandbox API Password**: Enter the sandbox API password obtained during eWay Gateway registration.  
+* **Sandbox Client-Side Encryption Key**: Add the sandbox encryption key provided upon eWay Gateway registration.  
+* **Payment Action**: Select the desired payment action from the dropdown menu.  
+* **Debug**: Enable debugging by setting it to "YES."  
+* **Credit Card Types**: Specify the credit card types that will be accepted for payments.  
+* **Payment from Applicable Countries**: Choose the countries where this payment method will be available.  
+* **Sort Order**: Define the sort order for how the payment method appears in the list.
+
+### **Step 2: Check eWay Payments on the Frontend**
+
+After successfully configuring the extension, the eWay payment method will be available and visible on the frontend.
+
+* **eWay Payment Method Using Direct Connection**
+
+![eWay Payment Method Using Direct Connection](https://github.com/user-attachments/assets/12af6578-230a-44e1-bb51-9ee46f17be93)
+
+The Direct Connection method requires customers to enter their credit card details to complete the payment. To finalize the transaction and successfully place the order, click the **"Place Order"** button.
+
+* **eWay Payment Method Using Responsive Shared Page Connection**
+
+![eWay Payment Method Using Responsive Shared Page Connection](https://github.com/user-attachments/assets/c936292f-397d-4633-9bf2-1fe3d1c88998)
+
+With the Responsive Shared Page method, customers are redirected to a payment form hosted by eWay to complete the transaction. Fill out the form and click the **"Pay Now"** button to finalize the payment.
+
+* **eWay Payment Method in the My Account Section**
+
+![eWay Payment Method in the My Account Section](https://github.com/user-attachments/assets/1e91a5c2-3ecb-47da-bc7a-8b7a4ade6a72)
+
+The customized payment method name, as configured in the backend, is displayed under the **"My Orders"** tab within the Account Dashboard. An example of this for the eWay payment method is shown below.
+
+### **Step 3: Check eWay Payments in the Backend**
+
+After an order is placed on the frontend using the eWay payment method, the transaction details can be viewed in the backend under the order details section.
+
+* **eWay Payment Method Details in Order View**
+
+![eWay Payment Method Details in Order View](https://github.com/user-attachments/assets/d26da14b-dcea-4412-963b-f7f2310520f8)
+
+The Order View section in the backend provides payment details, including the payment method name (eWay), transaction ID, response code, and approval message.
+
+## Download the [Magento 2 eWay Payments Extension](https://meetanshi.com/magento-2-eway-payments.html) Now\!
